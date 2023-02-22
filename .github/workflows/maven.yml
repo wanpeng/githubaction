@@ -31,3 +31,14 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Java Application
       run: java -jar target/githubaction-1.0-SNAPSHOT.jar
+    - name: check file
+      run: |
+        file=data.json
+        if test -f "$file"; then
+          echo "File exists"
+          echo "::set-output name=file_exists::true"
+        else
+          echo "File doesn't exist"
+          echo "::set-output name=file_exists::false"
+        fi
+
