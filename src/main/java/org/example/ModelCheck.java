@@ -1,5 +1,7 @@
+package org.example;
+
 public class ModelCheck {
     static public void main(String[] args){
-        System.out.println("test2");
+        System.out.println("test !!");
     }
 }
